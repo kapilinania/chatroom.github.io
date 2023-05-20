@@ -24,7 +24,7 @@ include 'connection.php';
  echo "Lets chat now";
 
  //check room if already exits
- $sql = "SELECT * FROM `rooms` WHERE rooname = '$room'";
+ $sql = "SELECT * FROM `rooms` WHERE rooname = '$room'  ";
  $result  = mysqli_query($con, $sql);
  if($result){
     if(mysqli_num_rows($result) > 0){
@@ -40,13 +40,14 @@ include 'connection.php';
             $resultChat = "Room is ready chat now";
             echo '<script language ="javascript">';
             echo 'alert("'.$resultChat.'");';
-            echo 'window.location="http://127.0.0.1/chatroom/rooms.php?rooname = '.$room.'";';
+            echo 'window.location="http://127.0.0.1/chatroom/rooms.php?roomname='.$room .'";';
             echo '</script>';
         }
     }
  }
  else{
     echo mysqli_error($con);
+    
  }
  
 
