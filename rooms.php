@@ -1,5 +1,5 @@
 <?php
-  
+error_reporting(0); 
 include 'connection.php';
 $roomname = $_GET['roomname'];
 
@@ -36,7 +36,10 @@ body {
   max-width: 1000px;
   padding: 0 20px;
 }
-
+a{
+  text-decoration:none;
+  color:white;
+}
 .container {
   border: 2px solid #dedede;
   background-color: #f1f1f1;
